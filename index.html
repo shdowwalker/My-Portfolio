@@ -27,6 +27,33 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <link rel="icon" href="images/logo.png">
+
+  <script>
+    // Function to calculate age based on birthdate
+    function calculateAge() {
+    // Birthdate (Year, Month (0-indexed), Day)
+    var birthDate = new Date(2003, 3, 8); // Note: Month is 0-indexed (0 = January, 1 = February, ..., 11 = December)
+    
+    // Current date
+    var currentDate = new Date();
+    
+    // Calculate age
+    var age = currentDate.getFullYear() - birthDate.getFullYear();
+    
+    // Check if birthday has occurred this year
+    if (currentDate.getMonth() < birthDate.getMonth() || 
+        (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    
+    // Display age
+    document.getElementById("age").textContent =  age;
+  }
+
+  // Call calculateAge() when the page loads
+  window.onload = calculateAge;
+  </script>
+
 </head>
 
 <body>
@@ -80,12 +107,12 @@
           <div class="col-md-6 ">
             <div class="detail_box">
               <h1>
-                Student <br>
-                Undergraduate <br>
-                Programmer
+                Software <br>
+                Engineering <br>
+                 Undergraduate
               </h1>
               <p>
-                My name is Sashika Piyumal welcome to my resume website.This web resume contain every thing about me that you want know. Thank you !
+                Welcome to my resume website. My name is Sashika Piyumal, and this site contains all the information you need to know about me. Thank you for visiting!
               </p>
               <a href="" class="">
                 Contact Me
@@ -147,10 +174,10 @@
           </div>
           <div class="detail-box">
             <h5>
-              Office Suit
+              Office Suite Proficiency
             </h5>
             <p>
-              I can do word processing and spred sheet handling finally i can do make presentations. I can work with  <b> Microsoft Office/LibreOffice/Google Office Suit</b>. 
+              I am proficient in word processing, spreadsheet management, and creating presentations. I can effectively work with <b>Microsoft Office, LibreOffice, and Google Workspace.</b>. 
             </p>
           </div>
         </div>
@@ -160,10 +187,10 @@
           </div>
           <div class="detail-box">
             <h5>
-              Linux Based Os
+              Linux-Based Operating Systems
             </h5>
             <p>
-              I can work on linux. Also i can do work on free and open source softwares. I have pretty good idea about linux terminal commands and about linux fundementals.
+              I am proficient in working with Linux operating systems and have extensive experience with free and open-source software. I possess a strong understanding of Linux terminal commands and the fundamentals of Linux.
             </p>
           </div>
         </div>
@@ -176,7 +203,7 @@
               Programming
             </h5>
             <p>
-              I'm not Proffesional programmer i'm begginer and daily improving .Programming Languages that i know <b>Python, JavaScript, TypeScript </b>.
+              I am a beginner in programming, continuously improving my skills daily. The programming languages I am familiar with include <b>Python, JavaScript, and TypeScript.</b>.
             </p>
           </div>
         </div>
@@ -186,10 +213,10 @@
           </div>
           <div class="detail-box">
             <h5>
-              Graphic Desighning
+              Graphic Designing
             </h5>
             <p>
-              Again I'm not Proffesional Designer you can see my level exploring this web pages. My graphic desighning skills are not zero i can do some basic things. Softwares which i can work on <b>Adobe Photoshop, Adobe Premier, Gimp, Photopea(Website), etc online tools</b>.
+              I am not a professional designer, but my skills are more than basic. You can explore my work on this website to get an idea of my proficiency. I am capable of using various software and online tools, including <b>Adobe Photoshop, Adobe Premiere, GIMP, and Photopea.</b>.
             </p>
           </div>
         </div>
@@ -202,7 +229,7 @@
               Communication
             </h5>
             <p>
-              And extra i have good communication skills also i'm daily improving because i'm self improvement meniac. 
+              Additionally, I have strong communication skills and am constantly working to improve them as part of my commitment to self-improvement. 
             </p>
           </div>
         </div>
@@ -229,7 +256,7 @@
               <img src="images/plug.png" alt="">
             </div>
             <p>
-              My name is Sashika Piyumal and i'm 20 years old from Sri Lanka. I'm Student at The Open University in Sri Lanka. I'm currently doing BSC Software Enginearing(Hons) digree. I love to work in any IT related company in Sri Lanka because i want because i haven't any working experieance yet. My Hobbies are Coding, Workouting, Traveling if you want to know anyway.
+              My name is Sashika Piyumal, and I am a <b id="age"></b>-year-old student from Sri Lanka. I am currently pursuing a Bachelor of Software Engineering degree at The Open University of Sri Lanka. I am eager to work in any IT-related company in Sri Lanka to gain practical experience, as I currently have no professional work experience. My hobbies include coding, working out, and traveling.
             </p>
             <a href="">
               Read More
@@ -391,8 +418,6 @@
     </div>
   </footer>
   <!-- footer section -->
-
-
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
 
